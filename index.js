@@ -21,9 +21,13 @@ function createBot() {
     }
   });
 
-  bot.on("login", () => {
-    console.log(`[BOT] Logged in as ${bot.username}`);
-  });
+ bot.on("login", () => {
+  console.log(`[BOT] Logged in as ${bot.username}`);
+
+  setTimeout(() => {
+    bot.chat("/login goybeam");
+  }, 3000);
+});
 
   function randomMove() {
     if (!bot.entity) return;
